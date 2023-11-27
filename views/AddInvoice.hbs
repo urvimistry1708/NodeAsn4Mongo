@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <center>
+    <div class="container">
+
+      <form action="/api/AddInvoice" method="POST" enctype="multipart/form-data">
+
+        <div class="row">
+          <h2>Add Invoice</h2>
+          <div class="input-group input-group-icon">
+            <input type="text" name="InvoiceNo" id="InvoiceNo" placeholder="InvoiceNo" />
+            {{!-- <div class="input-icon"><i class="fa fa-user"></i></div> --}}
+          </div>
+          <div class="input-group">
+            <input id="image" placeholder="image" type="file" name="image" />
+
+          </div>
+          <div class="input-group input-group-icon">
+            <input type="text" name="Manufacturer" id="Manufacturer" placeholder="Manufacturer" />
+            <div class="input-icon"><i class="fa fa-envelope"></i></div>
+          </div>
+          <div class="input-group input-group-icon">
+            <input type="text" name="class" id="class" placeholder="class" />
+            <div class="input-icon"><i class="fa fa-envelope"></i></div>
+          </div>
+          <div class="input-group input-group-icon">
+            <input type="text" name="Vehicle_type" id="Vehicle_type" placeholder="Vehicle type" />
+            <div class="input-icon"><i class="fa fa-envelope"></i></div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="input-group">
+            <div class="col-third">
+              <input type="text" name="Sales_in_thousands" id="Sales_in_thousands" placeholder="Sales in thousands" />
+            </div>
+            <div class="col-third">
+              <input type="text" name="__year_resale_value" id="__year_resale_value" placeholder="Year resale value" />
+            </div>
+            <div class="col-third">
+              <input type="text" name="Price_in_thousands" id="Price_in_thousands" placeholder="Price in thousands" />
+            </div>
+            <div class="col-third">
+              <input type="text" name="Engine_size" id="Engine_size" placeholder="Engine size" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group">
+            
+            <div class="col-third">
+              <input type="text" name="Horsepower" id="Horsepower" placeholder="Horsepower" />
+            </div>
+            <div class="col-third">
+              <input type="text" name="Wheelbase" id="Wheelbase" placeholder="Wheelbase" />
+            </div>
+            <div class="col-third">
+              <input type="text" name="Width" id="Width" placeholder="Width" />
+            </div>
+            <div class="col-third">
+              <input type="text" name="Length" id="Length" placeholder="Length" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group">
+            
+            <div class="col-third">
+              <input type="text" name="Curb_weight" id="Curb_weight" placeholder="Curb weight" />
+            </div>
+            <div class="col-third">
+              <input type="text" name="Fuel_capacity" id="Fuel_capacity" placeholder="Fuel capacity" />
+            </div>
+             <div class="col-third">
+              <input type="text" name="Fuel_efficiency" id="Fuel_efficiency" placeholder="Fuel efficiency" />
+            </div>
+            <div class="col-third">
+              <input type="text" name="Latest_Launch" id="Latest_Launch" placeholder="Latest Launch" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group">
+           
+            <div class="col-third">
+              <input type="text" name="Power_perf_factor" id="Power_perf_factor" placeholder="Power perf factor" />
+            </div>
+            <div class="col-third-btn">
+              <input type="submit" value="Add" style="color: white;"/>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    {{!-- <div class="addProductForm">
+      <p>Add Product</p>
+      <form action="/api/AddInvoice" method="POST" enctype="multipart/form-data">
+        <label for="InvoiceNo">Invoice No</label>
+        <input id="InvoiceNo" type="text" name="InvoiceNo" /><br />
+
+        <label for="image">Image</label>
+        <input id="image" type="file" name="image" /><br />
+
+        <label for="Manufacturer">Manufacturer</label>
+        <input id="Manufacturer" type="text" name="Manufacturer" /><br />
+
+        <label for="class">class</label>
+        <input id="class" type="text" name="class" /><br />
+
+        <input type="submit" value="Add" />
+      </form>
+    </div> --}}
+  </center>
+</body>
+
+</html>

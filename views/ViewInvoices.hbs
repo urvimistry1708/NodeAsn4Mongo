@@ -1,0 +1,96 @@
+<html>
+<script>
+    // Get the current path
+    var currentPath = window.location.pathname;
+
+    // Find and highlight the corresponding link
+    var links = document.querySelectorAll('.nav-link');
+    links.forEach(function(link) {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('selected');
+        }
+    });
+</script>
+
+<body>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        {{#each characters}}
+        <li class="nav-item">
+            <a class="nav-link"
+                href="?char={{this}}" role="tab"
+                aria-selected="false">{{this}}</a>
+
+        </li>
+        {{/each}}
+        
+            <a class="nav-link-btn" href="?page=1">Clear</a>
+       
+    </ul>
+    <div class="content">
+        <div class="TableContent">
+            {{#if CarSales}}
+            <table border="1">
+                <tr id="TableHeader">
+                    <th>InvoiceNo</th>
+                    <th>image</th>
+                    <th>Manufacturer</th>
+                    <th>class</th>
+                    <th>Sales_in_thousands</th>
+                    <th>__year_resale_value</th>
+                    <th>Vehicle_type</th>
+                    <th>Price_in_thousands</th>
+                    <th>Engine_size</th>
+                    <th>Horsepower</th>
+                    <th>Wheelbase</th>
+                    <th>Width</th>
+                    <th>Length</th>
+                    <th>Curb_weight</th>
+                    <th>Fuel_capacity</th>
+                    <th>Fuel_efficiency</th>
+                    <th>Latest_Launch</th>
+                    <th>Power_perf_factor</th>
+                </tr>
+                {{#each CarSales}}
+                <tr
+                    class="{{highlightRow InvoiceNo image Manufacturer class Sales_in_thousands __year_resale_value Vehicle_type Price_in_thousands Engine_size Horsepower Wheelbase Width Length Curb_weight Fuel_capacity Fuel_efficiency Latest_Launch Power_perf_factor}}">
+
+                    <td style="width: 20%;">{{replaceBlank this.InvoiceNo}}</td>
+                    <td><img src="{{checkImage this.image}}" width="80px" height="80px" /></td>
+                    <td>{{replaceBlank this.Manufacturer}}</td>
+                    <td>{{replaceBlank this.class}}</td>
+                    <td>{{replaceBlank this.Sales_in_thousands}}</td>
+                    <td>{{replaceBlank this.__year_resale_value}}</td>
+                    <td>{{replaceBlank this.Vehicle_type}}</td>
+                    <td>{{replaceBlank this.Price_in_thousands}}</td>
+                    <td>{{replaceBlank this.Engine_size}}</td>
+                    <td>{{replaceBlank this.Horsepower}}</td>
+                    <td>{{replaceBlank this.Wheelbase}}</td>
+                    <td>{{replaceBlank this.Width}}</td>
+                    <td>{{replaceBlank this.Length}}</td>
+                    <td>{{replaceBlank this.Curb_weight}}</td>
+                    <td>{{replaceBlank this.Fuel_capacity}}</td>
+                    <td>{{replaceBlank this.Fuel_efficiency}}</td>
+                    <td>{{replaceBlank this.Latest_Launch}}</td>
+                    <td>{{replaceBlank this.Power_perf_factor}}</td>
+                </tr>
+                {{/each}}
+            </table>
+            {{else}}
+                <center><h3 style="color: red;">No data Found!</h3></center>
+            {{/if}}
+        </div>
+
+    </div>
+    <center>
+        <div class="pagination">
+            {{#if hasPrevPage}}
+            <a href="?page={{prevPage}}"> ❮ Previous</a>
+            {{/if}}
+
+            {{#if hasNextPage}}
+            <a href="?page={{nextPage}}">Next ❯</a>
+            {{/if}}
+        </div>
+    </center>
+</body>
+</html>

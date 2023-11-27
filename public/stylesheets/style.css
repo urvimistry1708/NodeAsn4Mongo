@@ -1,0 +1,305 @@
+body {
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  /* display: flex;
+    flex-direction: column; */
+  /* height: 100vh;  */
+  border: 1px solid grey;
+}
+
+main {
+  padding: 20px;
+}
+
+header {
+  background-image: linear-gradient(45deg, white, grey, black);
+  padding: 2px;
+  font-size: 15px;
+}
+
+footer {
+  padding: 3px;
+  background-image: linear-gradient(45deg, white, grey, black);
+}
+
+header,
+footer {
+  background-color: #d9d7d7;
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  font-size: large;
+}
+
+.contentHome {
+  height: 68vh;
+}
+
+.content {
+  height: 74vh;
+  overflow-x: scroll;
+
+}
+
+td:first-child {
+
+  width: 50%;
+}
+
+th {
+  position: sticky;
+  top: 0;
+}
+
+.TableContent {
+  width: 90%;
+  margin: 0;
+  padding: 0;
+}
+
+#TableHeader th {
+  border: 2px solid black;
+}
+
+#allDataheader {
+  font-size: 30px;
+  margin-top: 40x;
+  color: rgb(30, 29, 29);
+  font-family: 'Comic Sans MS';
+  text-align: center;
+}
+
+.highlight {
+  color: red;
+}
+
+table {
+  border-collapse: collapse;
+  padding: 20px;
+  /* overflow-y: scroll; */
+}
+
+/* th{
+    position: sticky;
+    top: 0;
+} */
+
+th,
+td {
+  text-align: center;
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+
+th {
+  background-color: rgb(30, 29, 29);
+  color: white;
+}
+
+/* navigation menu bar style */
+nav {
+  background-color: rgb(30, 29, 29);
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 12px;
+  margin: 0;
+}
+
+nav ul li {
+
+  display: inline;
+  margin: 10px;
+  padding-inline: 30px;
+}
+
+nav ul a {
+
+  font-size: 15px;
+  text-decoration: none;
+  color: rgb(243, 236, 236);
+}
+
+nav ul a:hover {
+  color: #46bed9;
+}
+
+
+
+h2 {
+  color: rgb(30, 29, 29);
+}
+
+input {
+  width: 100%;
+  padding: 1em;
+  line-height: 1.4;
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 1em;
+  line-height: 1.4;
+  background-color: rgb(30, 29, 29);
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  font-weight: bolder;
+}
+
+input:focus {
+  outline: 0;
+  border-color: rgb(30, 29, 29);
+}
+
+input:focus+.input-icon i {
+  color: rgb(30, 29, 29);
+}
+
+input:focus+.input-icon:after {
+  border-right-color: rgb(30, 29, 29);
+}
+
+
+.input-group {
+  margin-bottom: 1em;
+  zoom: 1;
+}
+
+.input-group:before,
+.input-group:after {
+  content: "";
+  display: table;
+}
+
+.input-group:after {
+  clear: both;
+}
+
+.input-group-icon {
+  position: relative;
+}
+
+.container {
+  max-width: 45em;
+  margin: 0em auto;
+  border-radius: 4.2px;
+  box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+
+.row .input-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-third {
+  padding: 18px;
+  width: 18%;
+}
+
+.col-third-btn {
+  padding: 20px;
+  width: 65%;
+}
+
+@media only screen and (max-width: 540px) {
+  .col-half {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+/* Pagination */
+
+.pagination {
+  margin: 20px;
+
+}
+
+.pagination a {
+  color: white;
+  width: 20%;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border-radius: 10px;
+  background-color: rgb(30, 29, 29);
+}
+
+/* Search by character */
+
+ .nav-tabs {
+	border-bottom: 0px solid #dee2e6;
+	text-align: center;
+	display: block;
+	width: 100%;
+	margin-bottom: 30px
+}
+
+.nav-tabs .nav-item {
+	display: inline-block;
+}
+
+.nav-link-btn {
+  display: inline-block;
+      width: 40px;
+      height: 35px;
+      background-color: #303030;
+      color: #fff;
+      text-align: center;
+      line-height: 35px;
+      border-radius: 50%;
+      text-decoration: none;
+      margin-right: 5px;
+}
+
+.nav-link-btn:hover {
+	background-color: grey;
+}
+
+ 
+
+ .nav-tabs .nav-link {
+  display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-color: #303030;
+      color: #fff;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 50%;
+      text-decoration: none;
+      margin-right: 5px;
+}
+
+ .nav-tabs .nav-link:hover {
+	background-color: grey;
+}
+
+ .nav-tabs .nav-link:hover,
+ .nav-tabs .nav-link:focus {
+	border: medium none
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+	color: #fff;
+	background-color: grey;
+ 
+	
+}
+.selected {
+  background-color: yellow; /* You can choose any color you like */
+}
